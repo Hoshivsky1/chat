@@ -1,7 +1,6 @@
 import Header from './components/Header/Header';
 import Chats from './components/Chats/Chats';
 import Chat from './components/Chat/Chat';
-import AuthPage from './pages/AuthPage';
 
 import { useEffect, useState } from "react";
 import jwt_decode from 'jwt-decode';
