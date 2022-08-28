@@ -1,0 +1,263 @@
+@import './lib/nullstyle';
+@import 'variables';
+
+.wrapper {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    .block{
+        display: flex;
+        //* left-block chats and account================
+        &__left{
+            width: 35%;
+            background-color:aqua;
+            height: 100vh;
+            .header {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 20px;
+                background-color:#F5F5F5;
+                height: 170px;
+                border: 1px solid $borderColor; 
+                &__block{
+                    display: flex;
+                    align-items:center;
+                }
+                &__signout{
+                    margin-left: 15px;
+                    width: 80px;
+                    height: 30px;
+                    border: 1px  solid $borderColor;
+                    border-radius:20px;
+                    background-color:#F5F5F5;
+                    &:hover{
+                        background-color: #cccccc;
+                    }
+                }
+                .search{
+                    position: relative;
+                    left: 0px;
+                    margin-top: 20px;
+                }
+                .input {
+                    border: 1px solid rgba(0, 0, 0, 0.111);
+                    padding: 12px 20px;
+                    width: 100%;
+                    border-radius: 20px;
+                    font-style: 16px;
+                    padding-left: 40px;
+                    transition:  all 0.15s ease-in-out;
+                    &:focus {
+                        border: 1px solid rgba(0, 0, 0, 0.5);
+                    }
+                }
+                .icon{
+                    height: 23px;
+                    width: 23px;
+                    opacity: 0.4;
+                    position: absolute;
+                    left: 14px;
+                    top: 10px;
+                } 
+            }
+            .chats{
+                display: flex;
+                flex-direction: column;
+                background-color:#FFFFFF;
+                border: 1px solid $borderColor;
+                border-top: none;
+                height: 100vh;
+                margin-bottom: 100px;
+                padding-bottom: 170px;
+                &__items{
+                    overflow-y:scroll;
+                }
+                &__item{  
+                    padding: 20px;
+                    // margin-bottom: 10px;
+                    height: 100px;
+                    border-top: 1px solid $borderColor;
+                }
+                &__item:nth-child(1){
+                    border:none;
+                }
+                &__title{
+                    color:#2B83C4;
+                    font-size: 25px;
+                    margin: 40px 0px 40px 20px;
+                }
+            }
+            .persone{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                &__name{
+                    font-size: 18px;
+                }
+                &__text{
+                    width: 300px;
+                    line-height: 20px;
+                    margin-left: 20px;
+                    letter-spacing: 0.4px;
+                }
+                &__subtitle{
+                    font-size: 14px;
+                    color:#6e6e6e;
+                    font-weight: 300;
+                }
+                &__date{
+                    font-size: 13px;
+                    margin-bottom: 20px;
+                    margin-left: auto;
+                }
+            }  
+        }
+        //* right-block chat and input send================
+        &__right{
+            width: 65%;
+            
+            .chat{
+                &__account{
+                    display: flex;
+                    align-items:center;
+                    padding: 10px;
+                    height: 85px;
+                    background-color:#F5F5F5;
+                    border: 1px solid $borderColor;
+                    border-left: none;
+                    img{
+                        margin-left: 10px;
+                    }
+                }
+                &__name{
+                    font-size: 22px;
+                    font-weight: 500;
+                    margin-left: 20px;
+                }
+                //* messager(chat)
+                &__messager{
+                    height: 70vh;
+                    background-color:#FAFAFA;
+                    padding: 10px;
+                    overflow-y: scroll;
+                    .message__date-you{
+                        font-size: 12px;
+                        position: absolute;
+                        top: 110%;
+                        left: 100px;
+                    }
+                    .message__date-my{
+                        font-size: 12px;
+                        position: absolute;
+                        top: 75px;
+                        right:10px;
+                    }
+                    &-your{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 40px;
+                        .message__your{
+                            font-size: 17px;
+                            color:#FFFFFF;
+                            margin-left: 20px;
+                            font-weight: 400;
+                            letter-spacing: 1px;
+                            min-height: 60px;
+                            border-radius:25px;
+                            background-color:#3B4352;
+                            line-height: 35px;
+                            padding: 10px;
+                        }
+                    }
+                    &-my{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 40px;
+                        .message__my{
+                            font-size: 16;
+                            color:black;
+                            margin-left: 20px;
+                            font-weight: 300;
+                            letter-spacing: 1px;
+                            min-height: 60px;
+                            border-radius:25px;
+                            background-color:#E0E0E0;
+                            line-height: 35px;
+                            padding: 10px;
+                            margin-left: auto;
+                        }
+                    }
+                }
+                .send{
+                    height: 18.2vh;
+                    border: 1px solid $borderColor;
+                    border-left:none;
+                    background-color:#F5F5F5;
+                }
+                &__send{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 40px;
+                    position: relative;
+                    left: 0px;
+                    background-color:#F5F5F5;
+                    &-input{
+                        // background-color:red;
+                        border: 1px solid rgba(0, 0, 0, 0.111);
+                        padding: 12px 20px;
+                        max-width: 900px;
+                        width: 100%;
+                        border-radius: 20px;
+                        font-size: 17px;
+                        height: 50px;
+                        transition:  all 0.15s ease-in-out;
+                        &:focus {
+                            border: 1px solid rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                    .send-icon{
+                        height: 23px;
+                        width: 23px;
+                        opacity: 0.4;
+                        position: absolute;
+                        right: 64px;
+                        top: 14px;
+                    } 
+                }
+            }
+        }
+        .logo{
+            width: 60px;
+            height: 60px;
+            object-fit: cover;   
+            border-radius: 50%;
+            
+        }
+        @media (max-width: 688px) {
+            .block__left{
+                width: 25%;
+                .persone__text{
+                    display: none;
+                }
+                .persone__date{
+                    display: none;
+                }
+            }
+            .block__right{
+                width: 75%;
+            }
+            
+        }
+    }   
+}
+.hidden{
+    display: none;
+}
+#signInDiv{
+    position: absolute;
+    top: 30%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
