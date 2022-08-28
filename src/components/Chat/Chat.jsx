@@ -13,7 +13,7 @@ function Chat({chat}) {
         {id: 3, message: 'Hi bro!', messageIm: 'hi sis!', time: '4/22/17, 4:10 AM'},
         {id: 4, message: 'What is your name', messageIm: 'Maxim, and you ?',  time: '4/22/17, 4:10 AM'},
     ]
-    console.log(chuck);
+
     return (
         <div className="chat">
             <div className="chat__account">
